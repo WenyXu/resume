@@ -1,0 +1,107 @@
+% !TEX program = xelatex
+
+\documentclass{wenycv}
+
+% optionally suppress printing the page number
+\pagenumbering{gobble}
+
+\begin{document}
+
+
+%% basic personal info
+\name{Wenkang Xu}
+\begin{basicinfo}
+  \info{\email{wenymedia@gmail.com}}
+  \info{\homepage{terminal.im}[https://terminal.im]}
+  \info{\github{WenyXu}[https://github.com/wenyxu]}
+  % \phone{}
+\end{basicinfo}
+
+\section{Experiences}
+
+\cventry{Google Summer of Code 2022}
+  {March 2022 -- Fall 2022}
+  [Casbin Mentor]
+  [\iconlink[\faGithub][Casbin-Mesh/neo]{https://github.com/casbin-mesh/neo}] % TODO: github link
+  \begin{itemize}
+    \item Leads the development of \textbf{Casbin Neo}(new engine option), a Casbin-compatible engine. \iconlink[\faGithub]{https://github.com/casbin-mesh/neo}
+    \item Introduces the Synchronization Adaptive Radix Tree, 2-4x faster than BadgerDB's lock-free version Skip List, and 4-6x faster than Std Sync Map.  \iconlink[\faGithub]{https://github.com/casbin-mesh/neo/issues/10}
+    \item Builds the all new expression evaluation system, 2-8x faster than the origin dependency.  \iconlink[\faGithub]{https://github.com/casbin-mesh/neo/pull/54}
+    \item Introduces the MVVC(Multi-Version Timestamp Ordering) Index  \iconlink[\faGithub]{https://github.com/casbin-mesh/neo/pull/38}
+
+  \end{itemize}
+
+
+\section{Open-Source Contributions}
+
+\cventry{Senrok/yadal}
+  {Fall 2022 - Now}
+  [Yet Another Data Access Layer: Accessing S3, POSIX in the same way.]
+  [\iconlink[\faGithub][senrok/yadal]{https://github.com/senrok/yadal}]
+  \begin{itemize}
+    \item Leads the development of the \textbf{yadal} Project, deeply inspired Databend's OpenDAL and Databricks's Delta lake paper.
+  \end{itemize}
+
+\cventry{Casbin Community}
+  {September 2020 -- Fall 2022}
+  [Casbin-Mesh Maintainer]
+  [\iconlink[\faGithub][Casbin-Mesh]{https://github.com/casbin/casbin-mesh}]
+  \begin{itemize}
+    \item Leads the development of \textbf{Casbin Mesh}, A scalable authorization layer built on Casbin and Raft consensus algorithm.
+  \end{itemize}
+ 
+\cventry{Personal Projects}{ \iconlink[\faGithub][WenyXu]{https://github.com/wenyxu}}
+\begin{itemize}
+  \item \textbf{sync-adaptive-radix-tree} :
+  {\small An implementation of the Adaptive Radix Tree with Optimistic Lock Coupling.  \iconlink[\faGithub]{https://github.com/WenyXu/sync-adaptive-radix-tree}}
+\end{itemize}
+
+\section{Projects}
+
+\cventry{PingCAP's Talent-plan/TinySQL}
+  {July 2022 – September 2022}
+  [Minimum Viable Product of TiDB]
+  [\iconlink{https://asktug.com/t/topic/902996}]
+\begin{itemize}
+  \item Completes Join table SQL parser.
+  \item Implemented the Online Schema Change based on Google F1 paper.
+  \item Introduces Count-Min Sketch.
+  \item Implemented the predicate pushdown algorithm for aggregate expression (System-R like optimizer operator).
+  \item Implemented the dynamic programming version join reordering algorithm.
+  \item Implemented the vectorization for several executors.
+  \item Implemented the parallel Hash join \& aggregate algorithm.
+  \item Implemented the client-side two-phase commit protocol based on Percolator paper.
+\end{itemize}
+
+\cventry{CMU Database Group's Bustub}
+  {January 2022 – March 2022}
+  [CMU 15-445 Course Project]
+  []
+
+\begin{itemize}
+  \item Implemented the buffer pool manager based on the LRU replacement mechanism.
+  \item Implemented the Extendible Hash table.
+  \item Implemented the iterator model exectors.
+  \item Implemented the concurrecy control based on lock manager.
+\end{itemize}
+
+\cventry{PingCAP's Talent-plan/TinyKV}
+  {November 2021 – January 2022}
+  [A superset of MIT 6.824 Course Raft-KV Project]
+  [\iconlink{https://asktug.com/t/topic/393068}]
+
+\begin{itemize}
+  \item Implemented a standalone storage engine.
+  \item Implemented Raft Leader election, Log replication, Leader transfer, Configration changing, Peer changing algorithms.
+  \item Implemented the KV Store based on Multi-Raft.
+  \item Implemented the server-side two-phase commit protocol based on Percolator paper.
+\end{itemize}
+
+\section{Skills}
+
+\begin{compactlist}
+  \item \textbf{Programming Languages}: Golang, Node.js, C++, Rust, Python 
+  \item \textbf{Tech Skills}: Key-Value Storage Systems, Distributed Systems
+\end{compactlist}
+
+\end{document}
